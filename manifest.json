@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Backlog Favicon Changer",
+    "description": "Backlog Favicon Changer",
+    "version": "0.0.1",
+    "permissions": [
+        "tabs",
+        "https://*.backlog.jp/*"
+    ],
+    "web_accessible_resources": [
+        "*.png"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "https://*.backlog.jp/*" ],
+            "js": [
+                "js/jquery-2.1.3.min.js",
+                "js/underscore-min.js",
+                "js/script.js"
+            ],
+            "run_at": "document_end"
+        }
+    ]
+}
