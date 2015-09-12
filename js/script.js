@@ -19,4 +19,4 @@ setTimeout(function () {
         context.drawImage(favicon, 16, 16, 16, 16);
         link.href = canvas.toDataURL();
     };
-}, 500);
+}, 1000);
