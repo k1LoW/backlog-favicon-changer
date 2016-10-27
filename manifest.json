@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Backlog Favicon Changer",
     "description": "Backlog Favicon Changer",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "icons": {
         "128": "icon_128.png",
         "48": "icon_48.png",

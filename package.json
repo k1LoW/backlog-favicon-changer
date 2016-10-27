@@ -1,0 +1,20 @@
+{
+  "name": "backlog-favicon-changer",
+  "version": "0.2.0",
+  "description": "Backlog Favicon Changer",
+  "main": "src/script.js",
+  "scripts": {
+    "build": "zip -r ../backlog-favicon-changer.zip ./ -x node_modules/**\\* *.git* *.log"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k1LoW/backlog-favicon-changer.git"
+  },
+  "author": "k1LoW",
+  "license": "UNLISENCED",
+  "bugs": {
+    "url": "https://github.com/k1LoW/backlog-favicon-changer/issues"
+  },
+  "homepage": "https://github.com/k1LoW/backlog-favicon-changer",
+  "dependencies": {}  
+}
