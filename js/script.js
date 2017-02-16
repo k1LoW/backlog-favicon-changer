@@ -9,8 +9,13 @@ function changeFavicon() {
     favicon.src = faviconUrl;
 
     favicon.onload = () => {
-        if (isOriginalOldFavicon(favicon)) {
-            let source = $('.Banner-icon img')[0];
+        if (!isOriginalNewFavicon(favicon)) {
+            return;
+        }
+        let source = new Image();
+        source.crossOrigin = 'Anonymous';
+        source.src = $('img.header-icon-set__image')[0].src;
+        source.onload = () => {
             let canvas = document.createElement('canvas');
             let size = 32;
             canvas.width = size;
@@ -21,23 +26,7 @@ function changeFavicon() {
             context.globalCompositeOperation = 'source-over';
             context.drawImage(favicon, 16, 16, 16, 16);
             link.href = canvas.toDataURL();
-        } else if (isOriginalNewFavicon(favicon)) {
-            let source = new Image();
-            source.crossOrigin = 'Anonymous';
-            source.src = $('img.header-icon-set__image')[0].src;
-            source.onload = () => {
-                let canvas = document.createElement('canvas');
-                let size = 32;
-                canvas.width = size;
-                canvas.height = size;
-                let context = canvas.getContext('2d');
-
-                context.drawImage(source, 0, 0, size, size);
-                context.globalCompositeOperation = 'source-over';
-                context.drawImage(favicon, 16, 16, 16, 16);
-                link.href = canvas.toDataURL(); 
-            };            
-        }
+        };
     };
 }
 
@@ -58,21 +47,10 @@ function checkFavicon(favicon, checkpoint) {
 
 function isOriginalNewFavicon(favicon) {
     let checkpoint = [
-        [1,1,'[0,0,0,0]'],
-        [5,5,'[0,170,128,6]'],
-        [10,10,'[255,255,255,255]'],
-        //[20,20,'[255,255,255,255]'],
-        [30,1,'[0,0,0,0]']
-    ];
-
-    return checkFavicon(favicon, checkpoint);
-}
-
-function isOriginalOldFavicon(favicon) {
-    let checkpoint = [
-        [1,1,'[167,209,46,243]'],
-        [1,30,'[153,203,16,243]'],
-        [30,1,'[167,209,46,243]']
+        [1,1,'[64,200,155,28]'],
+        [5,5,'[66,206,159,255]'],
+        [10,10,'[184,237,219,255]'],
+        [30,1,'[64,200,155,28]']
     ];
 
     return checkFavicon(favicon, checkpoint);

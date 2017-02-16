@@ -1,6 +1,6 @@
 {
   "name": "backlog-favicon-changer",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Backlog Favicon Changer",
   "main": "src/script.js",
   "scripts": {
