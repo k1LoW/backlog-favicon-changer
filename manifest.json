@@ -13,11 +13,12 @@
     },
     "permissions": [
         "tabs",
+        "https://*.backlog.com/*",
         "https://*.backlog.jp/*"
     ],
     "content_scripts": [
         {
-            "matches": [ "https://*.backlog.jp/*" ],
+            "matches": [ "https://*.backlog.com/*", "https://*.backlog.jp/*" ],
             "js": [
                 "js/jquery-2.1.3.min.js",
                 "js/underscore-min.js",
