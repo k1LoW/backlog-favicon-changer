@@ -1,6 +1,6 @@
 {
   "name": "backlog-favicon-changer",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Backlog Favicon Changer",
   "main": "src/script.js",
   "scripts": {
@@ -16,5 +16,5 @@
     "url": "https://github.com/k1LoW/backlog-favicon-changer/issues"
   },
   "homepage": "https://github.com/k1LoW/backlog-favicon-changer",
-  "dependencies": {}  
+  "dependencies": {}
 }
